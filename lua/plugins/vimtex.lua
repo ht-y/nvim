@@ -35,15 +35,13 @@ return {
             }
     vim.g.vimtex_mappings_disable = { ['n'] = { 'K' } } -- disable `K` as it conflicts with LSP hover
     --    vim.g.vimtex_quickfix_method = vim.fn.executable 'pplatex' == 1 and 'pplatex' or 'latexlog'
-    vim.g.vimtex_quickfix_mode = 0 -- 编译器报错自动弹出(设置0为不自动弹出)
-    vim.g.vimtex_view_method = 'general' -- 设置.
-    vim.g.vimtex_view_general_viewer = 'SumatraPDF.exe'
-    vim.g.vimtex_view_general_options = "-reuse-instance -forward-search @tex @line @pdf"
-    -- vim.g.Tex_ViewRule_pdf = 'SumatraPDF -reuse-instance -inverse-search "nvim -c \\":RemoteOpen +%l %f\\""'
-    -- vim.g.vimtex_compiler_latexmk = {
-    --   aux_dir = './aux',
-    --   out_dir = './out',
-    -- }
+    --    linux 下用 zathura 的设置
+    vim.g.vimtex_view_method = "zathura"
+    --    windows 下用 SumatuaPDF 的设置
+    -- vim.g.vimtex_quickfix_mode = 0 -- 编译器报错自动弹出(设置0为不自动弹出)
+    -- vim.g.vimtex_view_method = 'general' -- 设置.
+    -- vim.g.vimtex_view_general_viewer = 'SumatraPDF.exe'
+    -- vim.g.vimtex_view_general_options = "-reuse-instance -forward-search @tex @line @pdf"
     
   end,
 }
