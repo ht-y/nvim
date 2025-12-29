@@ -22,3 +22,9 @@ vim.opt.incsearch = true -- 开启增量搜索
 vim.opt.hlsearch = true -- 高亮匹配项
 vim.opt.ignorecase = true -- 忽略大小写
 vim.opt.smartcase = true -- 有大写的时候敏感
+
+vim.o.makeprg = "cmake --build build"
+vim.o.errorformat = table.concat({
+  "%f:%l:%c: %t%*[^:]: %m", -- clang/gcc
+  "%f:%l: %t%*[^:]: %m",
+}, ",")

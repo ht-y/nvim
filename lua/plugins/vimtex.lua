@@ -37,6 +37,7 @@ return {
     --    vim.g.vimtex_quickfix_method = vim.fn.executable 'pplatex' == 1 and 'pplatex' or 'latexlog'
     --    linux 下用 zathura 的设置
     vim.g.vimtex_view_method = "zathura"
+    vim.g.vimtex_quickfix_mode = 0 -- 编译器报错自动弹出(设置0为不自动弹出)
     --    windows 下用 SumatuaPDF 的设置
     -- vim.g.vimtex_quickfix_mode = 0 -- 编译器报错自动弹出(设置0为不自动弹出)
     -- vim.g.vimtex_view_method = 'general' -- 设置.
